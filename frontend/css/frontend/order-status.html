@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order Status — Northstar Support</title>
+  <link rel="stylesheet" href__="css/styles.css" />
+</head>
+<body>
+  <script src="js/nav.js"></script>
+
+  <main class="page">
+    <header class="page-header">
+      <h1>Track your order</h1>
+      <p class="subtitle">Enter your order number to see its current status — no need to contact support.</p>
+    </header>
+
+    <section class="card">
+      <form id="order-status-form" novalidate>
+        <label for="order-number" class="field-label">Order number</label>
+        <div class="input-row">
+          <input
+            type="text"
+            id="order-number"
+            name="order-number"
+            placeholder="e.g. NS-100245"
+            autocomplete="off"
+            aria-describedby="order-error"
+          />
+          <button type="submit" id="submit-btn" class="btn-primary">Check status</button>
+        </div>
+        <p id="order-error" class="error-text" role="alert" aria-live="polite"></p>
+      </form>
+
+      <!-- Processing state (hidden until submit) -->
+      <div id="processing" class="processing" hidden>
+        <span class="spinner" aria-hidden="true"></span>
+        <span>Looking up your order…</span>
+      </div>
+
+      <!-- Order status response area -->
+      <div id="result" class="result" hidden aria-live="polite"></div>
+    </section>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/order-status.js"></script>
+</body>
+</html>
