@@ -1,2 +1,2 @@
-# nortstar-support-deflection
+# northstar-support-deflection
 Support Deflection MVP for Northstar
