@@ -9,7 +9,7 @@ const NAV_LINKS = [
 function renderNav(activeHref) {
   const links = NAV_LINKS.map((link) => {
     const isActive = link.href === activeHref ? "nav-link active" : "nav-link";
-    return `<a class="${isActive}" href__="${link.href}">${link.label}</a>`;
+    return `<a class="${isActive}" href="${link.href}">${link.label}</a>`;
   }).join("");
 
   const nav = document.createElement("nav");
@@ -26,3 +26,4 @@ function renderNav(activeHref) {
 
 // Auto-detect current page from the filename
 const current = window.location.pathname.split("/").pop() || "index.html";
+renderNav(current);
