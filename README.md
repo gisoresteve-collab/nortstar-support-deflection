@@ -1,5 +1,7 @@
 # nortstar-support-deflection
 
+# northstar-support-deflection
+
 Support Deflection MVP for Northstar
 A self-serve customer dashboard for Northstar Retail Co. that lets customers
 check **order status** and **returns/refunds** before opening a support ticket.
