@@ -136,3 +136,62 @@ body {
   .navbar { flex-direction: column; height: auto; padding: 12px; gap: 10px; }
   .page-header h1 { font-size: 24px; }
 }
+/* ===== Returns & Refunds Interface (Issue #6) ===== */
+
+.form-stack {
+  display: grid;
+  gap: 18px;
+}
+
+.request-select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  background: var(--white);
+  color: var(--black);
+  font-size: 16px;
+  cursor: pointer;
+  transition: border-color .15s;
+}
+
+.request-select:focus {
+  outline: none;
+  border-color: var(--blue);
+}
+
+.request-select[aria-invalid="true"] {
+  border-color: var(--orange-dark);
+  background: #fff7ed;
+}
+
+#return-order {
+  width: 100%;
+  padding: 12px 14px;
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  font-size: 16px;
+  transition: border-color .15s;
+}
+
+#return-order:focus {
+  outline: none;
+  border-color: var(--blue);
+}
+
+#return-order[aria-invalid="true"] {
+  border-color: var(--orange-dark);
+  background: #fff7ed;
+}
+
+@media (max-width: 560px) {
+  .form-stack {
+    gap: 14px;
+  }
+
+  .request-select,
+  #return-order,
+  .btn-primary {
+    width: 100%;
+  }
+}
