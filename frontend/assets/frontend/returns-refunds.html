@@ -1,30 +1,126 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
   <title>Returns & Refunds — Northstar Support</title>
+
   <link rel="stylesheet" href="css/styles.css" />
+
 </head>
+
 <body>
+
   <script src="js/nav.js"></script>
+
   <main class="page">
+
     <header class="page-header">
+
       <h1>Returns &amp; refunds</h1>
-      <p class="subtitle">Start a return or check a refund — no need to wait on support.</p>
+
+      <p class="subtitle">
+        Start a return or check refund information without opening a support ticket.
+      </p>
+
     </header>
+
     <section class="card">
+
       <form id="returns-form" novalidate>
-        <label for="return-order" class="field-label">Order number</label>
-        <div class="input-row">
-          <input type="text" id="return-order" placeholder="e.g. NS-100245" />
-          <button type="submit" class="btn-primary" style="background:var(--orange);">Start return</button>
+
+        <div class="form-stack">
+
+          <div>
+
+            <label
+              for="request-type"
+              class="field-label"
+            >
+              What do you need help with?
+            </label>
+
+            <select
+              id="request-type"
+              class="request-select"
+              required
+            >
+
+              <option value="">
+                Select a request
+              </option>
+
+              <option value="return">
+                I want to return an item
+              </option>
+
+              <option value="refund">
+                I want refund information
+              </option>
+
+              <option value="unsupported">
+                Other / unsupported request
+              </option>
+
+            </select>
+
+          </div>
+
+          <div>
+
+            <label
+              for="return-order"
+              class="field-label"
+            >
+              Order number
+            </label>
+
+            <input
+              type="text"
+              id="return-order"
+              placeholder="e.g. NS-100245"
+              autocomplete="off"
+            />
+
+          </div>
+
+          <button
+            type="submit"
+            class="btn-primary"
+            style="background:var(--orange);"
+          >
+            Submit request
+          </button>
+
         </div>
-        <p id="return-error" class="error-text" role="alert"></p>
+
+        <p
+          id="return-error"
+          class="error-text"
+          role="alert"
+        ></p>
+
       </form>
-      <div id="return-result" class="result" hidden></div>
+
+      <div
+        id="return-result"
+        class="result"
+        hidden
+      ></div>
+
     </section>
+
   </main>
+
   <script src="js/returns-refunds.js"></script>
+
 </body>
+
 </html>
