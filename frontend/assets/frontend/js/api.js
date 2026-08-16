@@ -1,6 +1,6 @@
 // Northstar Support API layer
 
-const API_BASE = "http://localhost:3000";
+const API_BASE = "https://northstar-support-api.onrender.com";
 
 async function fetchOrderStatus(orderNumber) {
   const response = await fetch(
